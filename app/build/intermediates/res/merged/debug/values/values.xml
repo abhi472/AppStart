@@ -31,6 +31,7 @@
     <color name="bright_foreground_material_light">@android:color/black</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
+    <color name="card">#212121</color>
     <color name="cardview_dark_background">#FF202020</color>
     <color name="cardview_light_background">#FFFAFAFA</color>
     <color name="cardview_shadow_end_color">#03000000</color>
@@ -241,6 +242,7 @@
     <dimen name="design_tab_text_size_2line">12sp</dimen>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="eight_margin">8dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
@@ -293,8 +295,10 @@
     <string name="app_name">AppStart</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="cashback">Get Cashback from Top Categories</string>
+    <string name="cashbackval">Get up to 16% LafaLafa rewards </string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="description">some text</string>
+    <string name="description">Men\'s Clothing</string>
     <string name="id">"textview</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <string name="title_activity_sec_page">SecPage</string>

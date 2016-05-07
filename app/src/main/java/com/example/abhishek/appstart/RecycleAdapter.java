@@ -57,16 +57,16 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     public void onBindViewHolder(ViewHolder holder, int position) {
 
 
-        NetworkImageView im2 = (NetworkImageView) holder.mView.findViewById(R.id.logo);
-        TextView tx1 = (TextView) holder.mView.findViewById(R.id.txt1);
-        TextView tx2 = (TextView) holder.mView.findViewById(R.id.txt2);
-        TextView tx3 = (TextView) holder.mView.findViewById(R.id.txt3);
-        tx1.setText(cont.get(position).cashbackTitle);
-        tx2.setText(cont.get(position).offerName);
-        tx3.setText(cont.get(position).OfferCashback);
-        if (imageLoader == null)
-            imageLoader = AppController.getInstance().getImageLoader();
-        im2.setImageUrl(cont.get(position).storeImg, imageLoader);
+//        NetworkImageView im2 = (NetworkImageView) holder.mView.findViewById(R.id.logo);
+//        TextView tx1 = (TextView) holder.mView.findViewById(R.id.txt1);
+//        TextView tx2 = (TextView) holder.mView.findViewById(R.id.txt2);
+//        //TextView tx3 = (TextView) holder.mView.findViewById(R.id.txt3);
+//        tx1.setText(cont.get(position).cashbackTitle);
+//        tx2.setText(cont.get(position).offerName);
+//        //tx3.setText(cont.get(position).OfferCashback);
+//        if (imageLoader == null)
+//            imageLoader = AppController.getInstance().getImageLoader();
+//        im2.setImageUrl(cont.get(position).storeImg, imageLoader);
         setAnimation(holder.mView, position);
     }
 

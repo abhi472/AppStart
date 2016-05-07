@@ -3,22 +3,34 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/lists"
+
     android:background="@color/tblack">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="@dimen/eight_margin"
+        android:layout_marginLeft="4dp"
+        android:layout_marginStart="4dp"
         android:layout_weight="1">
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
             android:background="@drawable/shape_rect"
+            android:text="@string/cashback"
+            android:textSize="16sp"
+            android:textColor="@color/card"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
             android:id="@+id/cross"
+            android:paddingLeft="56dp"
             android:layout_margin="@dimen/activity_horizontal_margin"/>
-        <View
+        <ImageView
             android:layout_width="56dp"
-            android:layout_height="match_parent"
+            android:layout_height="56dp"
             android:background="@drawable/shape_circle"
-            android:layout_gravity="start"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/cross"
             android:id="@+id/close_layout"
             android:layout_margin="4dp"
             />
@@ -30,6 +42,8 @@
     <android.support.v7.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/eight_margin"
+        android:layout_marginRight="@dimen/eight_margin"
         android:id="@+id/list"
         android:layout_weight="8"/>
 

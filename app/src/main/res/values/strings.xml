@@ -3,5 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="title_activity_sec_page">SecPage</string>
     <string name="id">"textview</string>
-    <string name="description">some text</string>
+    <string name="description">Men\'s Clothing</string>
+    <string name="cashbackval">Get up to 16% LafaLafa rewards </string>
+    <string name="cashback">Get Cashback from Top Categories</string>
 </resources>

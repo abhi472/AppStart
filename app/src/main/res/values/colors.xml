@@ -6,4 +6,5 @@
     <color name="black">#000</color>
     <color name="white">#fff</color>
     <color name="tblack">#90000000</color>
+    <color name="card">#212121</color>
 </resources>

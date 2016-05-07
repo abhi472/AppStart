@@ -8,6 +8,10 @@
         "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_default_mtrl_shape.xml"
     },
     {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/cross2.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/cross2.png"
+    },
+    {
         "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
         "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_edit_text_material.xml"
     },
@@ -154,6 +158,14 @@
     {
         "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
         "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/mens_clothing.jpg",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/mens_clothing.jpg"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/cross.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/cross.png"
     },
     {
         "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
