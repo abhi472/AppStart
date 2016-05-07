@@ -1,0 +1,162 @@
+[
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_top_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_edit_text_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/shape_circle.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/shape_circle.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/image_2.jpg",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/image_2.jpg"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_btn_radio_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_cab_background_internal_bg.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_indicator_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_small_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/image_1.jpg",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/image_1.jpg"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_dark.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_spinner_textfield_background_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/lafy_icon.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/lafy_icon.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/shape_rect.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/shape_rect.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_dark.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_dialog_material_background_dark.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_light.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_dialog_material_background_light.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_dialog_material_background_light.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/bicon.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/bicon.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/shape_scrim.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/shape_scrim.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_track_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abof.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/abof.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/image.jpg",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/image.jpg"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_tab_indicator_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_light.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/remove.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/remove.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_item_background_holo_light.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_holo_dark.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/design_fab_background.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/drawable/design_fab_background.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_thumb_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_ratingbar_full_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_ratingbar_full_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_textfield_search_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_btn_borderless_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_switch_thumb_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/design_snackbar_background.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/res/drawable/design_snackbar_background.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/snapdeallogo.png",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/src/main/res/drawable/snapdeallogo.png"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_list_selector_background_transition_holo_dark.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/res/merged/debug/drawable/abc_text_cursor_material.xml",
+        "source": "/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/res/drawable/abc_text_cursor_material.xml"
+    }
+]
