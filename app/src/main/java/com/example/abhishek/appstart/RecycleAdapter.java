@@ -2,7 +2,9 @@ package com.example.abhishek.appstart;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.view.GestureDetector;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AlphaAnimation;
@@ -19,17 +21,55 @@ import java.util.ArrayList;
 /**
  * Created by abhishek on 20/4/16.
  */
-public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> {
+public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHolder> implements RecyclerView.OnItemTouchListener{
 
     ArrayList<HotOffers> cont = new ArrayList<>();
     Context context;
+    GestureDetector gestureDetector;
     int lastPosition = -1;
     ImageLoader imageLoader = AppController.getInstance().getImageLoader();
+
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+
+
+    public RecycleAdapter (Context context, OnItemClickListener listener) {
+        mListener = listener;
+        gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
+            @Override
+            public boolean onSingleTapUp(MotionEvent e) {
+                return true;
+            }
+        });
+    }
+
 
 
     public RecycleAdapter(Context context, ArrayList<HotOffers> cont) {
         this.cont = cont;
         this.context = context;
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(RecyclerView rv, MotionEvent e) {
+        View childView = rv.findChildViewUnder(e.getX(), e.getY());
+        if (childView != null && mListener != null && gestureDetector.onTouchEvent(e)) {
+            mListener.onItemClick(childView, rv.getChildAdapterPosition(childView));
+        }
+        return false;
+    }
+
+    @Override
+    public void onTouchEvent(RecyclerView rv, MotionEvent e) {
+
+    }
+
+    @Override
+    public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {

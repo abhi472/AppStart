@@ -427,17 +427,30 @@ public class BackService extends AccessibilityService implements ICallBack{
         windowManager.addView(listview, params);
 
 
-        v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent();
+
+rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new RecycleAdapter.OnItemClickListener() {
+    @Override
+    public void onItemClick(View view, int position) {
+        Intent intent = new Intent();
                 intent.setComponent(new ComponentName("com.example.abhishek.hotoffers","com.example.abhishek.hotoffers.MainActivity"));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 windowManager.removeView(listview);
                 stopService(new Intent(BackService.this, BackService.class));
                 startActivity(intent);
-            }
-        });
+        Log.e(TAG, "onItemClick: "+position );
+    }
+}));
+//        v.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent();
+//                intent.setComponent(new ComponentName("com.example.abhishek.hotoffers","com.example.abhishek.hotoffers.MainActivity"));
+//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                windowManager.removeView(listview);
+//                stopService(new Intent(BackService.this, BackService.class));
+//                startActivity(intent);
+//            }
+//        });
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

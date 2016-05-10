@@ -1,2 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/home/abhishek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.5.4/a57a2df1a23ca1ee32f129173ba7f5feaa9ac24/jackson-core-2.5.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="0a57a2df1a23ca1ee32f129173ba7f5feaa9ac24">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-core-2.5.4_42514df410d0932e0f4042ec103537ee30989acc/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.2.1_684c53f0dc81dfb24f0115d731d3135ce645ca5d/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/libs/internal_impl-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.2.1_47b47fa58ca9c6bdb1edca44650082056e8ce016/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/library-1.0.19_07a0350ce134fcea029690e6802da68bdad003d0/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.2.1_675380e39f121fac1d26797081ada16f2da829c5/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-databind/2.5.4/5dfa42af84584b4a862ea488da84bbbebbb06c35/jackson-databind-2.5.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="5dfa42af84584b4a862ea488da84bbbebbb06c35">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-databind-2.5.4_152fd9cacc78e65233b5df756a4d02f2638db19f/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-annotations/2.5.4/7a93b60f5d2d43024f34e15893552ee6defdb971/jackson-annotations-2.5.4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="7a93b60f5d2d43024f34e15893552ee6defdb971">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/jackson-annotations-2.5.4_61fbccad4a5d8e1a9a583ab1c2ccb72adf328be6/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.2.1_3f0f6dd66802c49df0b88891fb90208fd47000d5/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="f371282ca0c65222a23310ff3beb9513ceaea4ef">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_2e4198fc124a10ef01f11f9c67a5bd3ae9cd47ed/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-23.0.1_5b5ba8b34b5a259ea88823e4c1900894a4720944/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/design/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="72961d8b453b46e277702f18de9d210bc019e36e">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.2.1_50fcd768c544bc99bbf087d122b43c4e945b13cf/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/Downloads/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/23.2.1/support-annotations-23.2.1.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.2.1_00bfc9ee9389dce90411a0e45294af9473f32d4b/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="32d57860e10f35809403fbb287d449dffc256623">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_288dd10fa220a68ef610c3ad08ddc6c3d015f05a/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e3885783ff8926ed9e2fdcd16816c2e1e73e7aee">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.2.1_25c2a91ef60d38b763e0b7ca048c38129961577f/classes.dex" />
+    </item>
+    <item
+        jar="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="/home/abhishek/AndroidStudioProjects/AppStart/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.2.1_f5007553da5fdd721e1d5da7c73a9e18ffe453fa/classes.dex" />
+    </item>
+
+</items>
