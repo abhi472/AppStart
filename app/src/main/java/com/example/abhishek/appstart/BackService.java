@@ -46,11 +46,11 @@ public class BackService extends AccessibilityService implements ICallBack{
     ArrayList<HotOffers> hotoffers = new ArrayList<>();
     private int x_init_cord, y_init_cord, x_init_margin, y_init_margin;
     private Point szWindow = new Point();
-    private  String url = "https://www.lafalafa.com/api/hotOffersApi/IN";
     ObjectMapper om = new ObjectMapper();
     public static String LogTag = "mytest";
     RecyclerView rv;
     int shift = 0;
+    int i =0;
     ArrayList<HotOffers> hot_offer_temp = new ArrayList<>();
     static final String TAG = "RecorderService";
 
@@ -60,12 +60,14 @@ public class BackService extends AccessibilityService implements ICallBack{
     @Override
     public void onCreate() {
         super.onCreate();
-        ApiManager.getInstance().sendReq(this,url);
+        String url = "https://www.lafalafa.com/api/hotOffersApi/IN";
+        ApiManager.getInstance().sendReq(this, url);
         for (int i =0;i<10;i++)
         {
             HotOffers ho = new HotOffers();
             ho.cashbackTitle = "hey";
             hot_offer_temp.add(ho);
+
         }
 
         }
@@ -79,9 +81,29 @@ public class BackService extends AccessibilityService implements ICallBack{
 
         if ((event.getPackageName().equals("com.flipkart.android")) && (event.getClassName().equals("com.flipkart.android.SplashActivity"))) {
 
-            notification(event.getPackageName().toString());
-            handleStart();
 
+            notification(event.getPackageName().toString());
+            if(popView!=null) {
+                if (!popView.isShown()) {
+                    handleStart();
+                }
+            }
+            else
+            {
+                handleStart();
+            }
+
+
+        }
+        else
+        if(event.getPackageName().equals("com.android.settings"))
+        {
+            if(popView!=null)
+            {
+                if (popView.isShown()) {
+                    windowManager.removeView(popView);
+                }
+            }
         }
 
     }
@@ -121,7 +143,6 @@ public class BackService extends AccessibilityService implements ICallBack{
 
 
         popView = (RelativeLayout) inflater.inflate(R.layout.chathead, null);
-        ImageView chatheadImg = (ImageView) popView.findViewById(R.id.chathead_img);
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
@@ -349,13 +370,9 @@ public class BackService extends AccessibilityService implements ICallBack{
     }
 
     private void resetPosition(int x_cord_now) {
-        boolean isLeft = true;
         if (x_cord_now <= szWindow.x / 2) {
-            isLeft = true;
             moveToLeft(x_cord_now);
-
         } else {
-            isLeft = false;
             moveToRight(x_cord_now);
 
         }
@@ -420,7 +437,6 @@ public class BackService extends AccessibilityService implements ICallBack{
         listview = (LinearLayout) inflater.inflate(R.layout.list, null);
         rv = (RecyclerView) listview.findViewById(R.id.list);
         cancel = listview.findViewById(R.id.close_layout);
-        View v = listview.findViewById(R.id.cross);
         setupRecyclerView(rv, hot_offer_temp);
 
         popView.animate().translationY(-100).alpha(0).setDuration(300);
@@ -440,17 +456,7 @@ rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new Recycl
         Log.e(TAG, "onItemClick: "+position );
     }
 }));
-//        v.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent();
-//                intent.setComponent(new ComponentName("com.example.abhishek.hotoffers","com.example.abhishek.hotoffers.MainActivity"));
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                windowManager.removeView(listview);
-//                stopService(new Intent(BackService.this, BackService.class));
-//                startActivity(intent);
-//            }
-//        });
+
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -545,7 +551,7 @@ rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new Recycl
 
         try {
             JsonFactory jsonFactory = new JsonFactory();
-            JsonParser jsonParser = jsonFactory.createJsonParser(result);
+            JsonParser jsonParser = jsonFactory.createParser(result);
             content  = om.readValue(jsonParser, Content.class);
 
         } catch (Exception e) {
