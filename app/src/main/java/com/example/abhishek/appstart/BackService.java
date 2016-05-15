@@ -18,7 +18,6 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -38,23 +37,21 @@ import java.util.ArrayList;
 /**
  * Created by abhishek on 18/3/16.
  */
-public class BackService extends AccessibilityService implements ICallBack{
+public class BackService extends AccessibilityService implements ICallBack {
 
     private WindowManager windowManager;
-    private RelativeLayout popView, removeView,rem_scrim;
+    private RelativeLayout popView, removeView, rem_scrim;
     private ImageView removeImg;
     ArrayList<HotOffers> hotoffers = new ArrayList<>();
     private int x_init_cord, y_init_cord, x_init_margin, y_init_margin;
-    private Point szWindow = new Point();
+    private Point szWindow = new Point();   // point class gives x and y position of the touch coordinate
     ObjectMapper om = new ObjectMapper();
     public static String LogTag = "mytest";
     RecyclerView rv;
     int shift = 0;
-    int i =0;
+    int i = 0;
     ArrayList<HotOffers> hot_offer_temp = new ArrayList<>();
     static final String TAG = "RecorderService";
-
-
 
 
     @Override
@@ -62,79 +59,79 @@ public class BackService extends AccessibilityService implements ICallBack{
         super.onCreate();
         String url = "https://www.lafalafa.com/api/hotOffersApi/IN";
         ApiManager.getInstance().sendReq(this, url);
-        for (int i =0;i<10;i++)
-        {
+        for (int i = 0; i < 10; i++) {
             HotOffers ho = new HotOffers();
             ho.cashbackTitle = "hey";
             hot_offer_temp.add(ho);
 
         }
 
-        }
-
-
+    }
 
 
     @Override
     public void onAccessibilityEvent(AccessibilityEvent event) {
 
 
-        if ((event.getPackageName().equals("com.flipkart.android")) && (event.getClassName().equals("com.flipkart.android.SplashActivity"))) {
+        if ((event.getPackageName().equals("com.flipkart.android"))/* && (event.getClassName().equals("com.flipkart.android.SplashActivity"))*/) {
 
 
-            notification(event.getPackageName().toString());
-            if(popView!=null) {
+            notification(event.getPackageName().toString());   // method added to avoid repetitive popViews
+            if (popView != null) {
                 if (!popView.isShown()) {
                     handleStart();
                 }
-            }
-            else
-            {
+            } else {
                 handleStart();
             }
 
 
         }
-        else
-        if(event.getPackageName().equals("com.android.settings"))
-        {
-            if(popView!=null)
-            {
-                if (popView.isShown()) {
-                    windowManager.removeView(popView);
+        else                                       // method added to just check if popview gets removed if settings is opened
+           if (event.getPackageName().equals("com.android.settings")) {
+            if (popView != null) {
+                    if (popView.isShown()) {
+                        windowManager.removeView(popView);
+                    }
                 }
             }
-        }
 
     }
 
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void handleStart() {
-        windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
 
-        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);  //windowmanager being initiated
 
-        removeView = (RelativeLayout) inflater.inflate(R.layout.remove, null);
-        rem_scrim = new RelativeLayout(getApplicationContext());
-        WindowManager.LayoutParams paramRemove = new WindowManager.LayoutParams(
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);//Layout Inflater being initialised
+
+        removeView = (RelativeLayout) inflater.inflate(R.layout.remove, null);// this is the cross view that will appear if the popView is to be removed
+        rem_scrim = new RelativeLayout(getApplicationContext());//Scrim around the removeView will be shown as a RelativeLayout
+
+        WindowManager.LayoutParams paramRemove = new WindowManager.LayoutParams(  //LayoutInflater for Remove Cross View
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 PixelFormat.TRANSLUCENT);
         paramRemove.gravity = Gravity.TOP | Gravity.START;
-        WindowManager.LayoutParams paramScrim= new WindowManager.LayoutParams(
+
+
+        WindowManager.LayoutParams paramScrim = new WindowManager.LayoutParams( //LayoutInflater for Scrim
                 WindowManager.LayoutParams.MATCH_PARENT,
                 WindowManager.LayoutParams.WRAP_CONTENT,
                 WindowManager.LayoutParams.TYPE_PHONE,
                 WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH | WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
                 PixelFormat.TRANSLUCENT);
-        paramScrim.gravity = Gravity.BOTTOM;
-        rem_scrim.setVisibility(View.GONE);
-        paramScrim.height= 300;
-        rem_scrim.setBackground(getDrawable(R.drawable.shape_scrim));
-        windowManager.addView(rem_scrim, paramScrim);
+        paramScrim.gravity = Gravity.BOTTOM; //setiing it's gravity
+
+        rem_scrim.setVisibility(View.GONE); //initially the visibility will be 0
+        paramScrim.height = 300;             //for now idk how to set height according to the height of the removeView
+
+        rem_scrim.setBackground(getDrawable(R.drawable.shape_scrim)); //setting background to the Scrim
+
+        windowManager.addView(rem_scrim, paramScrim); // added to WM
 
 
         removeView.setVisibility(View.GONE);
@@ -142,11 +139,11 @@ public class BackService extends AccessibilityService implements ICallBack{
         windowManager.addView(removeView, paramRemove);
 
 
-        popView = (RelativeLayout) inflater.inflate(R.layout.chathead, null);
+        popView = (RelativeLayout) inflater.inflate(R.layout.chathead, null); //have made a custom chathead that contains the popVIew and inflating it here
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            windowManager.getDefaultDisplay().getSize(szWindow);
+            windowManager.getDefaultDisplay().getSize(szWindow);        //getting the size of the window here
         } else {
             int w = windowManager.getDefaultDisplay().getWidth();
             int h = windowManager.getDefaultDisplay().getHeight();
@@ -172,8 +169,8 @@ public class BackService extends AccessibilityService implements ICallBack{
             boolean isLongclick = false, inBounded = false;
             int remove_img_width = 0, remove_img_height = 0;
 
-            Handler handler_longClick = new Handler();
-            Runnable runnable_longClick = new Runnable() {
+            Handler handler_longClick = new Handler();      //handler is the thread that counters the value of the time for which the onClick is working
+            Runnable runnable_longClick = new Runnable() {  //this is required because we need the cross layout to appear whenever we hold popView
 
                 @Override
                 public void run() {
@@ -190,59 +187,66 @@ public class BackService extends AccessibilityService implements ICallBack{
             public boolean onTouch(View v, MotionEvent event) {
                 WindowManager.LayoutParams layoutParams = (WindowManager.LayoutParams) popView.getLayoutParams();
 
-                int x_cord = (int) event.getRawX();
-                int y_cord = (int) event.getRawY();
+                int x_cord = (int) event.getRawX();    //gettingthe touch event coordinates : x axis here
+                int y_cord = (int) event.getRawY();    //                 "                 : y axis here
                 int x_cord_Destination, y_cord_Destination;
 
                 switch (event.getAction()) {
-                    case MotionEvent.ACTION_DOWN:
+                    case MotionEvent.ACTION_DOWN:    //action down event is called whenever touch frm fingers is done these finger touches are known as pointers
+                        //basically location of the popView is collected here and time offset is started
                         time_start = System.currentTimeMillis();
                         handler_longClick.postDelayed(runnable_longClick, 600);
 
-                        remove_img_width = removeImg.getLayoutParams().width;
-                        remove_img_height = removeImg.getLayoutParams().height;
-
+                        remove_img_width = removeImg.getLayoutParams().width;   //remove_img_width is initialised with 0
+                        remove_img_height = removeImg.getLayoutParams().height; //remove_img_height is initialised with 0
+                        //removeImg is inside remove
                         x_init_cord = x_cord;
                         y_init_cord = y_cord;
 
-                        x_init_margin = layoutParams.x;
+                        x_init_margin = layoutParams.x;   //popView layoutParams x coordinate and y coordinate below
                         y_init_margin = layoutParams.y;
 
 
                         break;
-                    case MotionEvent.ACTION_MOVE:
+                    case MotionEvent.ACTION_MOVE:// movement is triggered here
                         shift = 0;
-                        int x_diff_move = x_cord - x_init_cord;
+                        int x_diff_move = x_cord - x_init_cord; // finding out the distance moved with new x_cord and prev x_cord saved in x_init_cord
                         int y_diff_move = y_cord - y_init_cord;
 
-                        x_cord_Destination = x_init_margin + x_diff_move;
+                        x_cord_Destination = x_init_margin + x_diff_move; // destination is calculated taking up the margin
                         y_cord_Destination = y_init_margin + y_diff_move;
 
-                        if (isLongclick) {
+                        if (isLongclick) { //long click criteria will be set somewhere below
                             shift = 0;
                             rem_scrim.setVisibility(View.VISIBLE);
-                            int x_bound_left = szWindow.x / 2 - (int) (remove_img_width * 1.5);
-                            int x_bound_right = szWindow.x / 2 + (int) (remove_img_width * 1.5);
-                            int y_bound_top = szWindow.y - (int) (remove_img_height * 1.5);
+                            int x_bound_left = szWindow.x / 2 - (int) (remove_img_width * 2.5);//here the region is covered where if the poVIew enters will be bounded within removeView
+                            int x_bound_right = szWindow.x / 2 + (int) (remove_img_width * 2.5);//above statement was for left side of x axis and this is for the right side
+                            int y_bound_top = szWindow.y - (int) (remove_img_height * 1.5);//this is setting off the y axis region i.e. the bounded region will be semicircle
 
-                            if ((x_cord >= x_bound_left && x_cord <= x_bound_right) && y_cord >= y_bound_top) {
+                            int pop_current_height = popView.getHeight();
+                            int pop_current_width = popView.getWidth();
+
+                            if ((x_cord >= x_bound_left && x_cord <= x_bound_right) && y_cord >= y_bound_top) {//if popView enters the region where it has to be bound
                                 shift = 0;
-                                inBounded = true;
+                                inBounded = true;//isbounded value is set to be true i.e. now the popView is Bounded
 
-                                int x_cord_remove = (int) ((szWindow.x - (remove_img_height * 1.5)) / 2);
-                                int y_cord_remove = (int) (szWindow.y - ((remove_img_width * 1.5) + getStatusBarHeight()));
-
-                                if (removeImg.getLayoutParams().height == remove_img_height) {
+                                int x_cord_remove = (int) ((szWindow.x - (remove_img_width * 1.5)) / 2);
+                                int y_cord_remove = (int) (szWindow.y - ((remove_img_height * 1.5) + getStatusBarHeight()));
+//
+                                if (removeImg.getLayoutParams().height == remove_img_height) { //here we are concerned with size of the remove cross if popView is bounded and removeView is still small
                                     shift = 0;
-                                    removeImg.getLayoutParams().height = (int) (remove_img_height * 1.5);
+                                    removeImg.getLayoutParams().height = (int) (remove_img_height * 1.5); //height and width is inc by the size of 1.5 times
                                     removeImg.getLayoutParams().width = (int) (remove_img_width * 1.5);
 
                                     WindowManager.LayoutParams param_remove = (WindowManager.LayoutParams) removeView.getLayoutParams();
-                                    param_remove.x = x_cord_remove;
+                                    param_remove.x = x_cord_remove;//we are setting position for the
                                     param_remove.y = y_cord_remove;
 
                                     windowManager.updateViewLayout(removeView, param_remove);
                                 }
+
+
+
 
                                 layoutParams.x = x_cord_remove + (Math.abs(removeView.getWidth() - popView.getWidth())) / 2;
                                 layoutParams.y = y_cord_remove + (Math.abs(removeView.getHeight() - popView.getHeight())) / 2;
@@ -443,19 +447,18 @@ public class BackService extends AccessibilityService implements ICallBack{
         windowManager.addView(listview, params);
 
 
-
-rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new RecycleAdapter.OnItemClickListener() {
-    @Override
-    public void onItemClick(View view, int position) {
-        Intent intent = new Intent();
-                intent.setComponent(new ComponentName("com.example.abhishek.hotoffers","com.example.abhishek.hotoffers.MainActivity"));
+        rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new RecycleAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent();
+                intent.setComponent(new ComponentName("com.example.abhishek.hotoffers", "com.example.abhishek.hotoffers.MainActivity"));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 windowManager.removeView(listview);
                 stopService(new Intent(BackService.this, BackService.class));
                 startActivity(intent);
-        Log.e(TAG, "onItemClick: "+position );
-    }
-}));
+                Log.e(TAG, "onItemClick: " + position);
+            }
+        }));
 
         cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -466,8 +469,6 @@ rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new Recycl
 
             }
         });
-
-
 
 
     }
@@ -552,7 +553,7 @@ rv.addOnItemTouchListener(new RecycleAdapter(getApplicationContext(), new Recycl
         try {
             JsonFactory jsonFactory = new JsonFactory();
             JsonParser jsonParser = jsonFactory.createParser(result);
-            content  = om.readValue(jsonParser, Content.class);
+            content = om.readValue(jsonParser, Content.class);
 
         } catch (Exception e) {
             e.printStackTrace();
