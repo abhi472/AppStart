@@ -57,7 +57,7 @@ public class BackService extends AccessibilityService implements ICallBack {
     @Override
     public void onCreate() {
         super.onCreate();
-        String url = "https://www.lafalafa.com/api/hotOffersApi/IN";
+        String url = "";
         ApiManager.getInstance().sendReq(this, url);
         for (int i = 0; i < 10; i++) {
             HotOffers ho = new HotOffers();
